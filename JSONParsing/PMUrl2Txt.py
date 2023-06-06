@@ -18,6 +18,7 @@ for url in urls:
         for document in data['documents']:
             for passage in document['passages']:
                 content.append(passage['text'])
+                content.append("\n")
                 
         fileWriter = open("output\\"+numbers[i]+".txt", 'w', encoding="utf-8")
         fileWriter.writelines(content)
